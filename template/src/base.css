@@ -1,0 +1,9 @@
+/* base.css (c) 2017 mawentao */
+
+@import url('css/global.css');
+
+@import url('page/uc/index.css');
+
+@import url('page/exercise/result/index.css');
+
+@import url('css/exam.css');

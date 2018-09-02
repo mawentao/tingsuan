@@ -1,0 +1,14 @@
+
+.score-bar {}
+.score-bar>div {text-align:center;padding-bottom:8px;}
+.score-bar label {display:block;font-size:13px;}
+.score-bar span {font-size:20px;font-weight:bold;font-family:serif;}
+
+.exam-result-list {padding:10px 10px;}
+.exam-result-list:nth-child(2n+1) {background:#f3f4f5;}
+.exam-result-list .xuhao {padding:0px 5px;border-radius:100px;background:#aaa;color:#fff;font-size:12px;
+    display:inline-block;margin-right: 5px;
+}
+.exam-result-list .rt {float:right;padding-top:5px;}
+.exam-result-list .rt i {font-size:17px;}
+.exam-result-list p {font-size:12px;text-align:right;color:#F44336;}

@@ -1,0 +1,42 @@
+/* 蓝色阿里云风格 */
+
+/* 页头 */
+#frame-head {background-color:#4288b8;}
+#frame-west {background-color:#293038;}
+#frame-logo {background:#0087b4;}
+#frame-menu {background:#09c;}
+.menuul li a {color:#fff;}
+.menuul li a:hover,.menuul li a.active {background:#0087B4;border-radius:4px;color:#fff;}
+.menuul li a i {margin-right:3px;}
+.comdiv {color:#fff;}
+.comdiv a {color:#fff;}
+.userdiv:hover div a:hover {color:#0FB4F2;}
+
+/* 左部导航 */
+#leftnavexpbtn {color: #aeb9c2;}
+#leftnavexpbtn:hover {color:#fff;}
+.menu-open>a,.menu-close>a {background:#37424F;color:#fff;}
+.leftmenu>li>a {color:#fff;}
+.submenu>li>a {color:#fff;padding: 8px 20px 8px;}
+.leftmenu i {color:#aeb9c2;}
+.leftmenu a:hover {background:#37424F;color:#fff;}
+.leftmenu a.active{background:#09c;color:#fff;}
+.leftmenu a:hover>i, .leftmenu a.active>i {color:#fff;}
+.leftmenu>li {
+    border-top: none;
+    border-bottom: none;
+}
+
+/* mwt */
+.mwt-bar button {font-size:13px;}
+.mwt-search-primary {border:solid 2px #3bb4f2;}
+.mwt-search-primary input[type=text] {font-size:12px;}
+.mwt-search-primary .submit { background-color:#3bb4f2; border-left:solid 2px #3bb4f2;font-size:12px;}
+.mwt-search-primary .submit:hover {background-color: #0f9ae0;}
+.mwt-btn-primary {color: #fff;background-color:#3bb4f2;border-color:#3bb4f2;}
+.mwt-btn-primary:hover, .mwt-btn-primary:focus, .mwt-btn-primary:active, .mwt-btn-primary.active, .open .dropdown-toggle.mwt-btn-primary {
+    color:#fff; background-color: #0f9ae0; border-color: #3bb4f2;
+}
+.mwt-panel {border-color:#eee;}
+.mwt-panel>.header {border-bottom-color:#eee;height:auto;line-height:inherit;padding:0;background:#f1f1f1;}
+.mwt-bar {background:#f1f1f1;}

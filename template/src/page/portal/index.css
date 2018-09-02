@@ -1,0 +1,29 @@
+
+.foot-item {text-align:center;color:#666;}
+.foot-item.active {color:#f90;}
+
+.partition-title {padding:10px 10px;font-size:14px;color:#888;margin-bottom:5px;}
+.partition-title span {
+    color:#333;
+    display: block;
+    border-left: solid 3px #F90;
+    padding: 0 10px 3px;
+}
+
+.cella {
+    display:block;width:100;
+    color:#333;
+    padding:12px 0;
+}
+.cella i {
+/*
+    display:inline-block;
+    width:26px;height:26px;
+    line-height: 26px;
+    border-radius:300px;
+    background:#3bb4f2;
+*/
+    font-size:24px;
+    color:#3bb4f2;
+}
+.cella p {padding-top:2px;font-size:14px;}

@@ -1,0 +1,40 @@
+
+.quick-view-tab {width:100%}
+
+.quick-view-tab th,.quick-view-tab td {text-align:left;font-size:14px;color:#aaa;padding:5px 10px;}
+.quick-view-tab .rt {text-align:right;}
+.quick-view-tab tr:nth-child(2n+3) {background:#333542;}
+.quick-view-tab th {background:#2D3042;font-weight:normal;}
+.quick-view-tab em {font-style:normal;color:#FDD89A;font-size:16px;}
+
+.quick-view-tab .fall {color:#4ABF4A}
+.quick-view-tab .rise {color:#F9857F}
+
+.filterbtn {display:inline-block;float:right;text-decoration:none;padding:0px 5px 0 10px;color:#2EC7C9;}
+.filter-head {color:#0096A9;padding:10px 10px 5px;}
+
+.filter-body {position:fixed;top:0;left:0;right:0;bottom:40px;overflow:auto;}
+
+.filter-foot {position:fixed;bottom:0;left:0;right:0;}
+.filter-foot .btn {background: #34B7C7;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+}
+
+.filter-tab {width:100%}
+.filter-tab td {vertical-align:top;padding:2px 10px;color:#999;}
+.dimlabel {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-overflow: ellipsis;
+    vertical-align: text-bottom;
+    max-width: 200px;
+}
+
+
+.cube-metric-ul {margin:5px 10px; padding:0;}
+.cube-metric-ul label {display:block;font-size:13px;color:#aaa;padding:2px 0;}
+.cube-metric-ul input:checked+span {color:#333;}
+

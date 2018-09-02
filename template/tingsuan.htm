@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{$setting[page_title]}</title>
+  <link type="text/css" rel="stylesheet" href="{$plugin_path}/template/libs/mwt/4.0/mwt_mobile.min.css">
+  <link type="text/css" rel="stylesheet" href="{$plugin_path}/template/src/base.css">
+  <script type="text/javascript" src="{$plugin_path}/template/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/libs/mwt/4.0/mwt_mobile.min.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/libs/requirejs/2.1.9/require.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/src/japp.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="h5container">
+    <div id="frame-body"></div>
+  </div>
+  <div id="frame-foot" class="h5foot mwt-border-top" style="display:none;">
+    <div class="mwt-row mwt-row-flex">
+      <a name="navim" id="navim-exercise" href="#/exercise" class="mwt-col-fill foot-item"><i class="sicon-earphones-alt"></i>听算练习</a>
+      <a name="navim" id="navim-uc" href="#/uc" class="mwt-col-fill foot-item"><i class="icon icon-user"></i>我的</a>
+    </div>
+  </div>
+  <!--{template tingsuan:voice}--> 
+<script>
+var dz = {
+	// 基础信息
+	controller : '{$controller}',
+	siteurl    : '$_G['siteurl']',
+	pluginpath : '{$plugin_path}',
+	ajaxapi    : '{$plugin_path}/index.php?version=4&module=',
+	seccodeurl : '{$plugin_path}/index.php?version=4&module=seccode',
+	// 用户信息
+	uid      : $_G[uid],
+	groupid  : $_G[groupid],
+	username : '$_G['username']',
+	avatar   : '{avatar($_G['uid'],'',true)}',
+    email : '$_G['member']['email']',
+};
+function activeNav(key) {
+    jQuery('#frame-foot').show();
+    jQuery('[name=navim]').removeClass('active');
+    jQuery('#navim-'+key).addClass('active');
+}
+var japp=new JApp('{$plugin_path}/template/src/');
+japp.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* 全局样式 */
+body {background:#fff;}
+#frame-west{border-right:solid 1px #fff;background:#f2f2f2;}
+#frame-head {position:relative;height:50px;width:100%;}
+#frame-body {position:absolute;top:50px;left:0;right:0;bottom:0;}
+
+/* ========================== 头部样式 ========================== */
+/* 页头-Logo区 */
+#frame-logo {width:180px;padding-left:10px;}
+#frame-logo a {display:block;width:100%;line-height:50px;color:#fcfcfc;font-size:13px;
+    text-decoration:none;
+}
+#frame-logo a img {display:inline-block;vertical-align:middle;height:22px;}
+#frame-logo a span {display:inline-block;border-left:solid 1px #eee;padding-left:7px;margin-left:8px;line-height:20px;}
+
+/* 页头-导航菜单 */
+#frame-menu {position:absolute;top:0;left:180px;bottom:0;right:0;background:#3D3D45;}
+.menuul {display:inline-block;margin:0;padding:0;position: absolute;left:10px;bottom: 0;}
+.menuul li {list-style-type:none;margin:0;padding:0;float:left;line-height:50px;position:relative;}
+.menuul li a {
+    display:block;padding:0 10px;
+    text-decoration:none;color:#fff;font-size:14px;font-family:'microsoft yahei';
+    cursor:pointer;
+}
+.menuul li a:hover,.menuul li a.active {text-decoration:none;color:#FF8907;}
+.menuul li a i {margin-right:3px;}
+/* 子菜单 */
+.menu-sub{}
+.menu-sub-ul {
+    display:none;position:absolute;top:40px;left:10px;border:solid 1px #4c4c4c;z-index:999;
+    background:#fff;list-style: none;padding:0;
+    box-shadow:0px 0px 1px #6C767B;;
+}
+.menu-sub:hover+ul, .menu-sub-ul:hover { display:block; }
+.menu-sub-ul>li { display:block;position:relative;float:none;line-height:20px;}
+.menu-sub-ul>li>a {display:block;padding:6px 15px;font-size:13px;color:#333;white-space:nowrap;}
+.menu-sub-ul>li>a.active,.menu-sub-ul>li>a:hover {color: #FC8B1C;}
+
+/* 页头-用户菜单 */
+.comdiv {float:right;line-height:50px;color:#fff;font-size:14px;padding-right:10px;}
+.comdiv a {text-decoration:none;color:#fff;}
+.comdiv .notice {margin-right:8px;}
+.comdiv .icon {padding-left:0;}
+#top-notice-icon {margin-right:8px;font-size:15px;}
+#top-notice-icon.nonempty {color:#FFEB3B;}
+.userdiv {position:relative;display:inline-block;}
+.userdiv div {display:none;z-index:999;position:absolute;top:40px;right:0px;padding:5px 0;line-height:30px;
+border:solid 1px #ccc;background-color:#3D3D45;border-radius: 4px;
+       box-shadow: 0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12);
+}
+.userdiv:hover div {display:block;}
+.userdiv:hover div a:hover {color:#FF8907;}
+.userdiv .icon-contact {font-size:18px;margin-right:5px;vertical-align:text-bottom;}
+.userdiv-sub a {padding:0px 10px;white-space:nowrap;}
+.userdiv-sub i {padding:0;}
+
+/* ========================== 左部导航区样式 ========================== */
+.leftmenu {width:100%;}
+#leftnavexpbtn {color: #F80;font-size:11px;line-height:25px;text-align:center;letter-spacing:2px;cursor:pointer;}
+#leftnavexpbtn:hover {font-size:13px;}
+.leftmenu,.leftmenu ul,.leftmenu li{list-style-type:none;margin:0;padding:0}
+.leftmenu>li {border-top:solid 1px #fff; border-bottom:solid 1px #c8c8c8;}
+.leftmenu>li>a {display:block; padding:10px 30px 10px 15px;font-size:13px;font-family:"microsoft yahei";color:#666;position:relative;}
+.menu-close>ul {display:none;}
+.menu-open>a:after {display:inline-block;
+    font:normal normal normal 14px/1 FontAwesome;font-size:inherit;-webkit-font-smoothing: antialiased;
+    content:"\f106";position:absolute;top:12px;right:5px;font-size:16px;
+}
+.menu-close>a:after {display: inline-block;font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;-webkit-font-smoothing: antialiased;content: "\f107";
+    position:absolute;top:12px;right:5px;font-size:16px;
+}
+.menu-open>ul {display:block;}
+.submenu>li>a {display:block; padding:3px 30px 8px;font-size:12px;font-family:"microsoft yahei";}
+.leftmenu a{color:#666; text-decoration:none;}
+.leftmenu a:hover,.leftmenu a.active{text-decoration:none;color:#FF8907;}
+.leftmenu i {width:13px;text-align:center;}
+.leftmenu li.clearfix{border-bottom:none;}
+
+/* 面包屑导航 */
+.posul {display:inline-block;margin:0;padding:0;}
+.posul li {list-style-type:none;margin:0;padding:0;float:left;line-height:30px;color:#666;font-size:13px;}
+.posul li a {text-decoration:none;color:#666;}
+.posul li a:hover {color:#FF8907;}
+
+/* 个人中心 */
+.uctfm {border-collapse:collapse;font-size:13px;width:100%;}
+.uctfm th:after {content:'：';}
+.uctfm th {text-align:left;color:#666;font-weight:normal;}
+.uctfm tr:last-child {border-top:dashed 1px #ccc;}
+.uctfm th,.uctfm td {padding:5px 0;}
+
+.gridfill {position:absolute;left:10px;right:10px;bottom:10px;top:36px;}

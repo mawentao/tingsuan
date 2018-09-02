@@ -1,0 +1,83 @@
+<!--{eval
+$setting=C::m('#tingsuan#tingsuan_setting')->get();
+$navmenu=C::m('#tingsuan#tingsuan_nav_setting')->get_navmenu();
+$topheight=50;
+}-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{$setting[page_title]}</title>
+  <link type="text/css" rel="stylesheet" href="{$plugin_path}/template/libs/mwt/4.0/mwt.min.css">
+  <link type="text/css" rel="stylesheet" href="{$plugin_path}/template/src/base.css">
+  <link type="text/css" rel="stylesheet" href="{$plugin_path}/template/src/theme/default.css">
+  <script type="text/javascript" src="{$plugin_path}/template/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/libs/mwt/4.0/mwt.min.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/libs/requirejs/2.1.9/require.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/src/japp.js" charset="utf-8"></script>
+</head>
+<body>
+<!--frame-head-->
+<div id="frame-head">
+  <div id="frame-logo" style="width:{$sidewidth}px;">
+    <a href="#/"><img src="{$plugin_path}/template/src/theme/logo.png"><span>{$setting[page_title]}</span></a>
+  </div>
+  <div id="frame-menu" style="left:{$sidewidth}px;">
+    <!--导航菜单-->
+    <ul class="menuul">
+      <!--{loop $navmenu $k $im}-->
+      <li>
+        <a id="navmenu-{$im[text]}" name="navmenu" href="{$im[href]}"<!--{if $im[newtab]}--> target="_blank"<!--{/if}-->class="menu-item<!--{if $im[subitems]}--> menu-sub<!--{/if}-->"><i class="{$im[icon]}" style="padding-left:0;font-size:15px;"></i>{$im[text]}<!--{if $im[subitems]}--><i class="fa fa-angle-down" style="margin-left:2px;vertical-align:middle;font-size:16px;"></i><!--{/if}--></a>
+        <!--{if $im[subitems]}-->
+        <ul class="menu-sub-ul">
+          <!--{loop $im[subitems] $m $sim}-->
+          <li><a href="{$sim[href]}"{if $sim[newtab]} target="_blank"{/if}><i class="{$sim[icon]}"></i> <!--{$sim[text]}--></a></li>
+          <!--{/loop}-->
+        </ul>
+        <!--{/if}-->
+      </li>
+      <!--{/loop}-->
+    </ul>
+    <!--个人中心-->
+    <div class="comdiv">
+      <!--<a href="plugin.php?id=mis&mod=uc#/uc/notice"><i id="top-notice-icon" class="fa fa-envelope-o {if $newmsg}nonempty{/if}"></i></a>-->
+      <div class="userdiv">
+        <a href="plugin.php?id=mis&mod=uc"><i class="icon icon-contact"></i>{$_G['username']}</a>
+        <div class="userdiv-sub">
+          <a href="#/uc/changepass"><i class="icon icon-lock"></i> 修改密码</a><br>
+          <a href="{$plugin_path}/index.php?version=4&module=uc&action=logout"><i class="icon icon-logout"></i> 退出</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--frame-body-->
+<div id="frame-body"></div>
+<script>
+// 全局参数
+var setting = {echo json_encode($setting);};
+var dz = {
+	// 基础信息
+	controller : '{$controller}',
+	siteurl    : '$_G['siteurl']',
+	pluginpath : '{$plugin_path}',
+	ajaxapi    : '{$plugin_path}/index.php?version=4&module=',
+	seccodeurl : '{$plugin_path}/index.php?version=4&module=seccode',
+	// 用户信息
+	uid      : $_G[uid],
+	groupid  : $_G[groupid],
+	username : '$_G['username']',
+	avatar   : '{avatar($_G['uid'],'',true)}'
+};
+// 选中top菜单
+function activeTopNav(name){
+    jQuery('[name=navmenu]').removeClass('active');
+    jQuery('#navmenu-'+name).addClass('active');
+}
+var japp=new JApp('{$plugin_path}/template/src/');
+japp.init();
+</script>
+
+

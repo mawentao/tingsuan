@@ -1,0 +1,96 @@
+/* 全局样式 */
+body {background:#f1f2f3;color:#333;}
+* {
+    font-size:15px;
+    font-family:-apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;
+}
+
+#watermark span {
+    color: #666;
+    opacity: .10;
+}
+
+.h5container {margin:0 auto;}
+
+.global-loading {text-align:center;color:#ccc;padding-top:30px;}
+.global-loading i {font-size:16px;vertical-align:middle;}
+.global-loading:after {content:' 页面加载中...';font-size:14px;}
+
+.h5head {height:40px;line-height:40px;padding:0 10px;position: fixed;
+    top: 0;left:0;right:0;
+    z-index: 1;
+    background: #161825;
+}
+.h5head .fa {color:#2EC7C9;}
+
+.h5foot {
+    position:fixed;left:0;right:0;bottom:0;
+    height:45px;padding:0 10px;background:#fff;
+}
+.h5foot a {line-height:20px;font-size:13px;padding-top:8px;}
+.h5foot i {display:block;font-size:16px;}
+
+iframe {width:100%;height:100%;    
+    border: none;
+    outline: none;
+}
+
+.mwt-cell {height:80px;text-align:center;border:none;}
+
+.adminbtn {
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+
+.foot-item {text-align:center;color:#666;}
+.foot-item.active {color:#f90;}
+
+.partition-title {padding:10px 10px;font-size:14px;color:#888;margin-bottom:5px;}
+.partition-title span {
+    color:#333;
+    display: block;
+    border-left: solid 3px #F90;
+    padding: 0 10px 3px;
+}
+
+.cella {
+    display:block;width:100;
+    color:#333;
+    padding:12px 0;
+}
+.cella i { 
+    font-size:24px;
+    color:#3bb4f2;
+}
+.cella p {padding-top:2px;font-size:14px;}
+
+
+
+.topul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.topul>li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.topul>li>a {
+    text-decoration: none;
+    color: #666;
+    font-size: 15px;
+    display: block;
+    padding: 0 10px;
+    line-height: 40px;
+}
+.topul>li>a.active {
+    color: #F90;
+}
+.topul>li>a>i {padding-top:12px;display:inline-block;}

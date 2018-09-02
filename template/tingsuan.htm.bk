@@ -1,0 +1,29 @@
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{$setting[page_title]}</title>
+  <link type="text/css" rel="stylesheet" href="{$plugin_path}/template/libs/mwt/4.0/mwt.min.css">
+  <script type="text/javascript" src="{$plugin_path}/template/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript" src="{$plugin_path}/template/libs/mwt/4.0/mwt.min.js"></script>
+</head>
+<body>
+  <!--{template tingsuan:voice}--> 
+  <button id="playbtn" class="mwt-btn mwt-btn-primary mwt-btn-sm">Play</button>
+  
+<script>
+
+var voice = new Voice({speed:500,debug:1});
+
+jQuery('#playbtn').unbind('click').click(function(){
+    var express = ["32","+","199"];
+    var res = eval(express.join(''));
+    express.push("=");
+    express.push(res);
+    voice.speekArithmetic(express);
+});
+</script>
+
+</body>
+</html>

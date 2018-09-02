@@ -1,0 +1,14 @@
+/* cube图标 */
+.cube-icon {display:block;width:110px;height:110px;background-size:cover;}
+
+.cube-icon-bar {background-image:url(imgs/cube-bar.png);}
+.cube-icon-bar-stack {background-image:url(imgs/cube-bar-stack.png);}
+.cube-icon-pie {background-image:url(imgs/cube-pie.png);}
+.cube-icon-line {background-image:url(imgs/cube-line.png);}
+.cube-icon-scatter {background-image:url(imgs/cube-scatter.png);}
+.cube-icon-funnel {background-image:url(imgs/cube-funnel.png);}
+.cube-icon-radar {background-image:url(imgs/cube-radar.png);}
+.cube-icon-index {background-image:url(imgs/cube-index.png);}
+.cube-icon-table {background-image:url(imgs/cube-table.png);}
+.cube-icon-rank {background-image:url(imgs/cube-rank.png);}
+
