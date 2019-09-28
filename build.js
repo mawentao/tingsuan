@@ -11,6 +11,6 @@
     removeCombined: true,
 
 	packages: [
-		{name:'frame', location:'frame', main:'main'}
+        {name:'er', location:'../libs/er', main:'main'}
 	]
 })

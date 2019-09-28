@@ -159,7 +159,9 @@ function Voice(opt)
             case '=': word="等于"; break;
         }
         var audio = document.getElementById('voice_'+word);
-        if (audio) audio.play();       
+        if (audio) {
+            audio.play();       
+        }
     };/*}}}*/
 
     // 读单词数组

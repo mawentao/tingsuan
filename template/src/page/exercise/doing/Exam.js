@@ -25,7 +25,7 @@ function Exam(item,opt)
             var v = item.questionOptions[i];
             var btn = '<div class="mwt-col-6 exam-btns">'+
                   '<button name="exam-opt-btn" data-v="'+v+'" '+
-                    'class="mwt-btn mwt-btn-default mwt-btn-lg">'+
+                    'class="exam-answer-btn">'+
                     v+'</button>'+
                 '</div>';
             opts.push(btn);
@@ -69,7 +69,8 @@ function Exam(item,opt)
             this.finish();
             return;
         }
-        jQuery('#exam-timing').html(s+'s');
+        var code = '<span>'+s+'s</span>';
+        jQuery('#exam-timing').html(code);
 
         setTimeout(function(){
             thiso.timing(--s);

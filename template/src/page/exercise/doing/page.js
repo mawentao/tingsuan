@@ -23,7 +23,7 @@ define(function(require){
         var code = '<div class="exam_top">'+
                 '<h1>'+examDetail.title+'</h1>'+
             '</div>'+
-            '<div id="examnav-'+domid+'"></div>'+
+            '<div id="examnav-'+domid+'" class="exam-progress mwt-border-bottom"></div>'+
             '<div id="body-'+domid+'"></div>';
         jQuery('#'+domid).html(code);
 
@@ -58,7 +58,7 @@ define(function(require){
             return;
         }
         // 未结束
-        var code = (i+1)+'/'+n;
+        var code = '<div>第 <b>'+(i+1)+'</b> / '+n+' 题</div>';
         jQuery('#examnav-'+domid).html(code);
         players[i].show();
         setTimeout(function(){

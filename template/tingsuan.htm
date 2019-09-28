@@ -43,7 +43,43 @@ function activeNav(key) {
     jQuery('#navim-'+key).addClass('active');
 }
 var japp=new JApp('{$plugin_path}/template/src/');
-japp.init();
+//japp.init();
+
+function inWechat()
+{
+    var u = navigator.userAgent;
+    return u.indexOf('MicroMessenger')>-1;
+}
+
+if (!inWechat()) {
+    japp.init();
+} else {
+  document.addEventListener("WeixinJSBridgeReady", function () { 
+    document.getElementById('voice_零').load(); 
+    document.getElementById('voice_一').load(); 
+    document.getElementById('voice_二').load(); 
+    document.getElementById('voice_三').load(); 
+    document.getElementById('voice_四').load(); 
+    document.getElementById('voice_五').load(); 
+    document.getElementById('voice_六').load(); 
+    document.getElementById('voice_七').load(); 
+    document.getElementById('voice_八').load(); 
+    document.getElementById('voice_九').load(); 
+    document.getElementById('voice_十').load(); 
+    document.getElementById('voice_百').load(); 
+    document.getElementById('voice_千').load(); 
+    document.getElementById('voice_万').load(); 
+    document.getElementById('voice_亿').load(); 
+    document.getElementById('voice_点').load(); 
+    document.getElementById('voice_加').load(); 
+    document.getElementById('voice_减').load(); 
+    document.getElementById('voice_乘').load(); 
+    document.getElementById('voice_除').load(); 
+    document.getElementById('voice_等于').load(); 
+    japp.init();
+  }, false);
+}
+
 </script>
 </body>
 </html>

@@ -77,7 +77,12 @@ class table_tingsuan_exam_record extends discuz_table
                 'uid' => $uid,
                 'ctime' => $ctime,
             );
-            $this->insert($data);
+            for ($retry=0;$retry<3;++$retry) {
+                $id = $this->insert($data,true);
+                if ($id) break;
+                usleep(10000);
+            }
+           
             /*
             $vals[] = "('$examId','$title','$expressJson','$questionJson','$right_answer',".
                        "'$status','$display_order','$uid','$ctime')";

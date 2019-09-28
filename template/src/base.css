@@ -1,7 +1,10 @@
 /* base.css (c) 2017 mawentao */
 
 @import url('css/global.css');
+@import url('css/mwt.css');
 
+@import url('page/exercise/index.css');
+@import url('page/exercise/doing/index.css');
 @import url('page/uc/index.css');
 
 @import url('page/exercise/result/index.css');
